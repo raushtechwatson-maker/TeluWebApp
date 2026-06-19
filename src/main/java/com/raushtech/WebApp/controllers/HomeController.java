@@ -7,13 +7,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HomeController {
 
 
-    @ResponseBody
     @RequestMapping("/")
-    public String greet(){
+    public String homeGreet(){
         return "Welcome to WebApp Home....";
     }
+
+
+    @RequestMapping("/about")
+    public String about(){
+        return "My Website is for Alert Danger..";
+    }
+
+
 }
